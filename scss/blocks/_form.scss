@@ -1,0 +1,46 @@
+@use 'sass:color';
+@use '../base/vars' as vars;
+@use '../base/mixin' as *;
+.form{
+
+}
+
+.form__input{
+    height: 50px;
+    padding: 12px;
+    text-align: center; 
+    color: vars.$color-dark;
+    background-color: rgba(255, 255, 255, 0.3);
+    font-size: 14px;
+    transition: background-color 0.2s ease-in-out;
+
+    &::placeholder{
+        color: vars.$color-dark;
+    }
+
+    &:focus{
+        background-color: rgba(255, 255, 255, 0.5);
+    }
+}
+
+.form__privacy{
+    font-size: 13px;
+    color: vars.$color-dark;
+    text-align: center;
+}
+
+.form__btn{
+    height: 50px;
+    padding: 12px;
+    font-size: 16px;
+    color: vars.$color-dark;
+    background-color: vars.$color-brown;
+    font-weight: 500;
+    text-align: center;
+    transition: background-color 0.2 ease-in-out; 
+
+    &:hover{
+//        background-color: saturate($color-brown, 10%);
+        background-color: color.adjust(vars.$color-brown, $saturation: 10%);
+    }
+}

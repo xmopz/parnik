@@ -1,0 +1,41 @@
+@use '../base/vars' as vars;
+@use '../base/mixin' as *;
+
+.footer{
+    padding-top: 72px;
+    padding-bottom: 51px; 
+    background-color: #ffebd0;
+    border-top: 2px solid black;
+    
+    border-radius: 10px;
+
+    @include mediaTablet{
+        padding-top: 36px;
+        padding-bottom: 25px;
+        grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+        gap: 40px 30px;
+    }
+}
+
+.footer__grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.footer__logo{
+
+}
+
+.footer__nav{
+
+}
+
+.footer__nav-list{
+    display: grid;
+    gap: 10px;
+}
+
+.footer__address{
+
+}

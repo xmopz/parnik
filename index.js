@@ -4,10 +4,10 @@ app.set('view engine', 'ejs')
 
 const PORT = 8080
 
-
+app.use(express.static('public'))
 
 app.get('/', (req, res) => {
-    res.render('test')
+    res.render('index')
 })
 
 app.get('/about', (req, res) => {

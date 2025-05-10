@@ -1,0 +1,40 @@
+@use '../base/vars' as vars;
+@use '../base/mixin' as *;
+
+.saunas{
+    content: "";
+    opacity: 1;
+    position: relative;
+    z-index: 6;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    border-top: 2px solid black;
+
+    background: linear-gradient(
+        180deg,
+        #ffebd0 11.98%,
+        rgb(255, 255, 255) 51.04%,
+        #ffebd0 92.19%
+    );
+}
+
+.saunas__title{
+    margin-bottom: 55px;
+    padding-top: 45px;
+
+    @include mediaTablet{
+       margin-bottom: 40px;
+    }
+}
+
+.saunas__cards{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+
+    @include mediaTablet{
+        grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    }
+}

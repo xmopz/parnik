@@ -1,0 +1,36 @@
+@use '../base/vars' as vars;
+@use '../base/mixin' as *;
+
+.info{
+    position: relative;
+    font-size: 14px;
+
+    &--map, &--tel{
+        padding-left: 35px;
+
+        &::before{
+            content: "";
+
+            position: absolute;
+            left: 0px;
+            top: 50%;
+            width: 21px;
+            height: 21px;
+            
+            transform: translate(0%, -50%);
+
+            background-repeat: no-repeat;
+        }
+    }
+
+
+    &--map::before{
+        background-image: url('./../img/map.svg');
+    }
+
+    &--tel::before{
+        background-image: url('./../img/phone.svg');
+    }
+
+    @include mediaTablet{}
+}

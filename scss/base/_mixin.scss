@@ -1,0 +1,7 @@
+@use './vars' as vars;
+
+@mixin mediaTablet{
+    @media screen and (max-width: vars.$tablet) {
+        @content;
+    }
+}

@@ -1,0 +1,33 @@
+@use '../base/vars' as vars;
+@use '../base/mixin' as *;
+
+.section-map{
+    padding: 70px 0px;
+    border-top: 2px solid black;
+    
+    border-radius: 10px;
+    background: linear-gradient(
+        180deg,
+        #ffebd0 11.98%,
+        rgba(255, 255, 255, 0) 51.04%,
+        #ffebd0 92.19%
+    ),
+    linear-gradient(0deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.3));
+    
+    @include mediaTablet{
+        padding: 40px 0px;
+    }
+}
+
+.section-map__title{
+    margin-bottom: 30px;
+}
+
+.section-map__map{
+
+}
+
+.map{
+    height: 358px;
+    background-color: vars.$color-light;
+}

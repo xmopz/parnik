@@ -1,3 +1,34 @@
-body{
-    color: red;
-}
+//Base
+@use './base/reset';
+
+@use './base/vars';
+
+@use './base/mixin';
+
+@use './base/base';
+
+
+//Blocks
+@use './blocks/header';
+
+@use './blocks/nav';
+
+@use './blocks/nav-icon';
+
+@use './blocks/info';
+
+@use './blocks/benefits';
+
+@use './blocks/saunas';
+
+@use './blocks/card';
+
+@use './blocks/cta';
+
+@use './blocks/form';
+
+@use './blocks/section-map';
+
+@use './blocks/yandex-map';
+
+@use './blocks/footer';

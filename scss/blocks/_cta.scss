@@ -1,0 +1,55 @@
+@use '../base/vars' as vars;
+@use '../base/mixin' as *;
+
+.cta{
+    padding: 280px 0px;
+
+    background: linear-gradient(
+        180deg,
+        #ffebd0 11.98%,
+        rgba(255, 255, 255, 0) 51.04%,
+        #ffebd0 92.19%
+    ),
+    linear-gradient(0deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.3)),
+    url('./../img/cta/bg.jpg'), #ffffff;
+
+    @include mediaTablet{
+        padding: 100px 0;
+    }
+}
+
+.cta__tittle{
+    margin-bottom: 17px;
+}
+
+.cta__wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+
+    @include mediaTablet{
+        grid-template-columns: 1fr;
+    }
+}
+
+.cta__text{
+    line-height: 1.5;
+
+    P + P{
+        margin-top: 1em;
+    }
+
+    @include mediaTablet{
+        font-size: 12px;
+    }
+}
+
+.cta__form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px 10px ;   
+
+    @include mediaTablet{
+        grid-template-columns: 1fr;
+    }
+}

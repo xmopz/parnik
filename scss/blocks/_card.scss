@@ -1,0 +1,95 @@
+@use '../base/vars' as vars;
+@use '../base/mixin' as *;
+
+.card{
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+    color: vars.$color-brown;
+
+
+    &::before{
+        content: "";
+        opacity: 1;
+        position: absolute;
+        z-index: 6;
+        left: 0px;
+        top: 0px;
+        width: 100%;
+        height: 100%;
+
+        background: linear-gradient(
+            180deg,
+            rgba(241, 95, 5, 0) 0%,
+            #ffffff 100%
+        ),
+    }
+
+    &::after{
+        opacity: 0;
+        content: "";
+        position: absolute;
+        width: 95%;
+        z-index: 7;
+        left: 15px;
+        top: 15px;
+        right: 15px;
+        bottom: 15px;
+        border: 5px double vars.$color-dark;
+        transition: opacity 0.2s ease-in-out;
+
+    }
+
+    &:hover{
+        color: vars.$color-dark;
+    }
+
+    &:hover::after{
+        opacity: 1;
+    }
+
+    &:hover::before{
+        opacity: 0.7;
+        transition: opacity 0.2s ease-in-out;
+    }
+}
+
+.card__img{
+    position: relative;
+    z-index: 5;
+    width: 500px 100%;
+    height: auto;
+/*  border-radius: 10px; */
+    transition: all 0.2s ease-in-out;
+}
+
+.card:hover .card__img{
+    transform: scale(1.04);
+    filter: contrast(130%) brightness(0.9) saturate(1.4);
+}
+
+.card__title{
+    position: absolute;
+    left: 50px;
+    right: 20px;
+    bottom: 44px;
+    font-size: 20px; 
+    z-index: 10;
+    transition: transform 0.2s ease-in-out;
+
+    @include mediaTablet{
+        font-size: 14px;
+        left: 36px;
+        right: 12px;
+        bottom: 32px;
+    }
+
+}
+
+.card:hover .card__title{
+    transform: scale(1.04);
+}
+
+.card::before:hover{
+    transform: scale(1.04);
+}

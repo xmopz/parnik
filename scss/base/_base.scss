@@ -1,0 +1,70 @@
+@use './vars' as vars;
+@use './mixin' as *;
+
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+body {
+    font-family: vars.$font-main;
+    background-color: vars.$color-light;
+    color: vars.$color-dark;
+    font-size: 16px;
+}
+
+a{
+    color: vars.$color-brown;
+    transition: color .2s ease-in-out;
+
+    &:hover{
+        color: vars.$color-dark;
+    }
+}
+
+.container{
+    margin: 0 auto;
+    padding: 0 15px;
+    max-width: 1140px;
+
+    &--small{
+        max-width: 1020px;
+    }
+}
+
+.text-right{
+    text-align-last: right;
+}
+
+.visually-hidden{
+    height: 1px;
+    overflow: hidden;
+    width: 1px;
+
+    position: absolute;
+
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px, 1px, 1px, 1px);
+
+    white-space: nowrap;
+}
+
+.none{
+    display: none !important;
+}
+
+.title-2{
+    font-size: 36px;
+    color: vars.$color-dark;
+    font-weight: 500;
+
+    @include mediaTablet{
+        font-size: 24px;
+    }
+
+}
+
+.link-bold{
+    font-weight: 600;
+}
+
+.no-scroll{
+    overflow-y: hidden;
+}
